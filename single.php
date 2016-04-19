@@ -1,7 +1,3 @@
-<?php if( current_user_can('administrator') ) : ?>
-<?php edit_post_link(__('Edit This Post')); ?>
-<?php endif; ?>
-
 <?php get_header(); ?>
 
 <?php

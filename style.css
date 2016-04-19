@@ -767,10 +767,18 @@ body {
   color: #333;
 }
 
+h1 {
+  padding-bottom: 1rem;
+}
+
 h3 {
   font-size: 24px;
   font-weight: 300;
   color: #df6d2c;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 a {
@@ -817,6 +825,10 @@ dd {
   }
 }
 
+.post-edit-link {
+  position: absolute;
+}
+
 .callout {
   background-color: #f0f0f0;
 }
@@ -825,7 +837,7 @@ dd {
   text-align: left;
 }
 
-.text-center, .text-right {
+.text-center {
   text-align: center;
 }
 
@@ -1523,6 +1535,15 @@ GRID TOC
   color: #df6d2c;
 }
 
+/*
+==============================
+VIDEO SIDEBAR
+==============================
+*/
+.page-template-page-video-view .ad-container img {
+  max-width: initial;
+}
+
 #site-footer {
   background-color: #333;
   color: #ccc;
@@ -2177,6 +2198,11 @@ button.btn-white-outline:hover a {
   color: #333;
 }
 
+/*
+==============================
+VIDEO EMBED STYLES
+==============================
+*/
 .video-outer {
   padding: 56.25% 0 0 0;
   position: relative;
@@ -2190,10 +2216,27 @@ button.btn-white-outline:hover a {
   width: 100%;
 }
 
-.page-template-page-video-view .video-inner iframe {
-  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+.video-stage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  overflow: hidden;
 }
 
+/*
+==============================
+VIDEO THUMBNAIL STYLES
+==============================
+*/
 .video-thumb .card-top img {
   position: relative;
 }
@@ -2233,6 +2276,38 @@ button.btn-white-outline:hover a {
 
 .video-thumb .card-top:hover a:after {
   background-color: rgba(223, 109, 44, 0.75);
+}
+
+/*
+==============================
+PAGE-VIDEO-VIEW STYLES
+==============================
+*/
+.page-template-page-video-view .post-hero {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.page-template-page-video-view .post-blur-outer {
+  height: 120vh;
+  opacity: 1;
+}
+
+.page-template-page-video-view section:first-child {
+  color: #fff;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.75);
+}
+
+.page-template-page-video-view section:nth-child(2) {
+  background-color: #fff;
+}
+
+.page-template-page-video-view .video-inner iframe {
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {

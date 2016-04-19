@@ -22,6 +22,10 @@
 	// padding-right: 1rem;
 }
 
+.post-edit-link {
+	position: absolute;
+}
+
 .callout {
 	background-color: $lgray;
 }
@@ -35,7 +39,6 @@
 }
 
 .text-right {
-	@extend .text-center;
 	@include bp(sm) {
 		text-align: right;
 	}

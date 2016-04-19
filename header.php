@@ -20,6 +20,13 @@
 </head>
 <body <?php body_class(); ?>>
 
+<?php if ( is_author() || is_category() || is_front_page() ) : ?>
+<?php else : ?>
+    <?php if( current_user_can('administrator') ) : ?>
+        <?php edit_post_link(__('Edit This Post')); ?>
+    <?php endif; ?>
+<?php endif; ?>
+
 
 <section id="site-top" class="animated">
     <div class="site-width">

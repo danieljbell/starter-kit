@@ -1,3 +1,8 @@
+/*
+==============================
+VIDEO EMBED STYLES
+==============================
+*/
 .video-outer {
 	padding: 56.25% 0 0 0;
 	position: relative;
@@ -11,10 +16,27 @@
 	width: 100%;
 }
 
-.page-template-page-video-view .video-inner iframe {
-	box-shadow: 0 0 ($spacing-unit * 3) rgba(0,0,0,0.5);
+.video-stage {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: $gray;
+	color: $white;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	filter: blur(10px);
+	overflow: hidden;
 }
 
+
+/*
+==============================
+VIDEO THUMBNAIL STYLES
+==============================
+*/
 .video-thumb .card-top img {
 	position: relative;
 }
@@ -52,4 +74,37 @@
 			background-color: transparentize($brand, 0.25);
 		}
 	}	
+}
+
+
+/*
+==============================
+PAGE-VIDEO-VIEW STYLES
+==============================
+*/
+.page-template-page-video-view .post-hero {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.page-template-page-video-view .post-blur-outer {
+	height: 120vh;
+	opacity: 1;
+}
+
+.page-template-page-video-view section:first-child {
+	color: $white;
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.75);
+}
+
+.page-template-page-video-view section:nth-child(2) {
+	background-color: $white;
+}
+
+.page-template-page-video-view .video-inner iframe {
+	box-shadow: 0 0 ($spacing-unit * 3) rgba(0,0,0,0.5);
 }

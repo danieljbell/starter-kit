@@ -1,0 +1,37 @@
+.post-sidebar {
+	@include bp(md) {
+		padding-left: $spacing-unit * 2;
+	}
+}
+
+.newsletter-signup {
+    background: $lgray;
+    border: 1px solid $mgray;
+    padding: ($spacing-unit * 2) ($spacing-unit * 2) $spacing-unit;
+    text-align: center;
+    @include bp(md) {
+    	margin-bottom: $spacing-unit * 2;
+    }
+}
+
+.ad-container {
+	display: none;
+	background-color: $brand;
+	text-align: center;
+	color: $white;
+	@include bp(md) {
+		display: block;
+		padding: $spacing-unit * 2;
+	}
+	@include bp(lg) {
+		padding: ($spacing-unit * 3) ($spacing-unit * 4);
+	}
+	img {
+		max-width: 150px;
+		margin: 0 auto;
+		margin-bottom: $spacing-unit;
+	}
+	.btn-white a {
+		color: $brand;
+	}
+}

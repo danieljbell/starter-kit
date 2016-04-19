@@ -1,0 +1,96 @@
+table,
+tr,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	width: 100%; 
+	border: 1px solid $mgray;
+	box-shadow: 0 0 8px rgba(0,0,0,0.10);
+	border-radius: $radius;
+}
+
+th,
+td {
+	display: block;
+	@include bp(md) {
+		display: table-cell;
+		border-right: 1px solid $mgray;
+	}
+}
+
+tr {
+	&:last-child td {
+		border-bottom: 0;
+	}
+	@include bp(md) {
+		td {
+			background-color: $lgray;
+		}
+		&:nth-child(2n) td {
+			background-color: $white;
+		}
+	}
+}
+
+th {
+	background-color: $brand;
+	color: $lgray;
+	padding: $spacing-unit ($spacing-unit / 2);
+	text-transform: uppercase;
+	display: none;
+	@include bp(md) {
+		display: table-cell;
+	}
+}
+
+td {
+	padding: 0 ($spacing-unit / 2) $spacing-unit;
+	&:last-child {
+		border-bottom: $spacing-unit solid $brand;
+		@include bp(md) {
+			border-bottom: 0;
+		}
+	}
+	@include bp(md) {
+		padding: $spacing-unit ($spacing-unit / 2);
+	}
+	&:before {
+		text-transform: uppercase;
+		background-color: $mgray;
+		font-weight: bold; 
+		display: block;
+		border-bottom: 1px solid $mgray;
+		margin: 0 ($spacing-unit / -2) $spacing-unit;
+		padding: $spacing-unit ($spacing-unit / 2);
+		@include bp(md) {
+			display: none;
+		}
+	}
+}
+
+td {
+	&:nth-child(1) {
+		&:before {
+			content: 'Table Head Cell 1';
+		}
+	}
+	&:nth-child(2) {
+		&:before {
+			content: 'Table Head Cell 2';
+		}
+	}
+	&:nth-child(3) {
+		&:before {
+			content: 'Table Head Cell 3';
+		}
+	}
+	&:nth-child(4) {
+		&:before {
+			content: 'Table Head Cell 4';
+		}
+	}
+}

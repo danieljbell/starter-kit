@@ -1,0 +1,245 @@
+/*=====================================================
+GRID TOC
+=====================================================
+1. Importing Bootstrap Grid mixins
+2. Clearfix Mixin to handle floats
+3. Grid Classes
+*/ 
+
+
+/*
+=====================================================
+1. BRING IN BOOTSTRAPS GRID MIXINS
+=====================================================
+*/ 
+@import 'vendor/bootstrap/mixins/grid-framework',
+		'vendor/bootstrap/mixins/grid';
+
+
+/*
+=====================================================
+2. GOOD OL' CLEARFIX TO KICK THINGS OFF
+=====================================================
+*/ 
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/*
+=====================================================
+3. BASIC GRID CLASSES
+	- Adding "-reversed" will flip the way in which 
+	  items are displayed
+	- Adding "-force" forces columns to not break
+	  at all sizes
+	- Adding "-stack" forces columns to alternate
+	  stacking order on smaller devices  
+=====================================================
+*/ 
+.half {
+	@include make-row;
+	> * {
+		@include make-sm-column(6);
+	}
+	&-stack {
+		@include make-row;
+		position: relative;
+		> * {
+			float: right;
+			width: 100%;
+			position: relative;
+			&:first-child {
+					right: -0;
+				}
+				&:last-child {
+					right: 0;
+				}
+			@include bp(sm) {
+				width: 50%;
+			}
+		}	
+	} 
+	&-flex {
+		display: flex;
+		> * {
+			flex: 1;
+		}
+	}
+	&-force {
+		@include make-row;
+		> * {
+			@include make-xs-column(6);
+		}
+	}
+	&-only {
+		@include make-row;
+		> * {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			@include bp(sm) {
+				width: 50%;
+			}
+		}
+	}
+}
+
+.third {
+	@include make-row;
+	> * {
+		@include make-sm-column(4);
+	}
+	&-force {
+		@include make-row;
+		> * {
+			@include make-xs-column(4);
+		}
+	}
+	&-only {
+		@include make-row;
+		> * {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			@include bp(sm) {
+				width: 33.333%;
+			}
+		}
+	}
+}
+
+.fourth {
+	@include make-row;
+	> * {
+		@include make-sm-column(6);
+		@include make-md-column(3);
+	}
+	&-only {
+		@include make-row;
+		> * {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			@include bp(sm) {
+				width: 25%;
+			}
+		}
+	}
+}
+
+.two-third {
+	@include make-row;
+	> * {
+		&:first-child {
+			@include make-sm-column(8);
+		}
+		&:last-child {
+			@include make-sm-column(4);
+		}
+	}
+	&-md {
+		@include make-row;
+		> * {
+			&:first-child {
+				@include make-md-column(8);
+			}
+			&:last-child {
+				@include make-md-column(4);
+			}
+		}
+	}
+	&-force {
+		@include make-row;
+		> * {
+			&:first-child {
+				@include make-xs-column(8);
+			}
+			&:last-child {
+				@include make-xs-column(4);
+			}
+		}
+	}
+	&-reversed {
+		@include make-row;
+		> * {
+			&:first-child {
+				@include make-sm-column(4);
+			}
+			&:last-child {
+				@include make-sm-column(8);
+			}
+		}
+		&-force {
+			@include make-row;
+			> * {
+				&:first-child {
+					@include make-xs-column(4);
+				}
+				&:last-child {
+					@include make-xs-column(8);
+				}
+			}
+		}
+		&-stack {
+			@include make-row;
+			position: relative;
+			> * {
+				float: right;
+				width: 100%;
+				position: relative;
+				&:first-child {
+					right: -0;
+					@include bp(md) {
+						width: 66.6666%;
+					}
+				}
+				&:last-child {
+					right: 0;
+					@include bp(md) {
+						width: 33.3333%;
+					}
+				}
+			}	
+		}
+	}
+	&-stack {
+		@include make-row;
+		position: relative;
+		> * {
+			float: right;
+			width: 100%;
+			position: relative;
+			&:first-child {
+				right: -0;
+				@include bp(md) {
+					width: 33.3333%;
+				}
+			}
+			&:last-child {
+				right: 0;
+				@include bp(md) {
+					width: 66.6666%;
+				}
+			}
+		}	
+	}
+	&-only {
+		@include make-row;
+		> * {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			@include bp(sm) {
+				width: 66.6666%
+			}
+		}
+	}
+}
+

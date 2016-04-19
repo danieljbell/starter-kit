@@ -1,0 +1,47 @@
+.stuck {
+  position:fixed;
+  top: 0;
+  width: 31.7%;
+  max-width: 480px;
+  transform: translateY($spacing-unit * 3);
+}
+.slim .post-hero {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	z-index: 100;
+	@include bp(sm) {
+		display: initial;
+	}
+}
+.slim .post-blur-outer {
+	height: $spacing-unit * 6;
+}
+.slim h1 {
+	padding: 0;
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+.slim .post-sidebar {
+	left: 70%;
+}
+
+@media screen and (max-width: 768px) {
+	.stuck {
+		position: initial;
+		top: initial;
+		transform: none;
+		width: 100%;
+		max-width: inherit;
+	}
+	.slim .post-sidebar {
+		display: none;
+	}
+}

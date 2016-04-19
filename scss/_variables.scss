@@ -1,0 +1,114 @@
+/*
+========================
+COLORS
+========================
+*/ 
+$brand: #df6d2c;
+$brand2: #5ea5b5;
+$gray: #333;
+$mgray: #ccc;
+$lgray: #f0f0f0;
+$white: #fff;
+
+
+/*
+========================
+FONTS
+========================
+*/ 
+$font-stack: 'Open Sans', Helvetica, Arial, sans-serif;
+
+
+/*
+========================
+BREAKPOINTS
+========================
+*/ 
+$breakpoints: (
+  xs: 0px,
+  sm: 480px,
+  md: 768px,
+  lg: 1200px,
+  xl: 1440px
+) !default;
+
+
+/*
+========================
+SPACING + RADIUS
+========================
+*/ 
+$spacing-unit: 1rem;
+$radius: 3px;
+
+
+/*
+========================
+GRID
+========================
+*/ 
+$grid-gutter-width: 1rem;
+$grid-columns: 12 !default;
+
+
+/*
+========================
+MODALS
+========================
+*/ 
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+          box-shadow: $shadow;
+}
+
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050 !default;
+$border-radius-large: $radius;
+$line-height-base: 1.3rem;
+
+$screen-sm-min: map-get($breakpoints, sm);
+$screen-md-min: map-get($breakpoints, md);
+
+//** Padding applied to the modal body
+$modal-inner-padding:         15px !default;
+
+//** Padding applied to the modal title
+$modal-title-padding:         15px !default;
+//** Modal title line-height
+$modal-title-line-height:     $line-height-base !default;
+
+//** Background color of modal content area
+$modal-content-bg:                             #fff !default;
+//** Modal content border color
+$modal-content-border-color:                   rgba(0,0,0,.2) !default;
+//** Modal content border color **for IE8**
+$modal-content-fallback-border-color:          #999 !default;
+
+//** Modal backdrop background color
+$modal-backdrop-bg:           #000 !default;
+//** Modal backdrop opacity
+$modal-backdrop-opacity:      .5 !default;
+//** Modal header border color
+$modal-header-border-color:   #e5e5e5 !default;
+//** Modal footer border color
+$modal-footer-border-color:   $modal-header-border-color !default;
+
+$modal-lg:                    900px !default;
+$modal-md:                    600px !default;
+$modal-sm:                    300px !default;

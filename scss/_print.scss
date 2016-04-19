@@ -1,0 +1,16 @@
+@media print {
+	#menu-toggle,
+	.post-sharing,
+	aside,
+	.related-articles,
+	hr {
+		display: none;
+	}
+	.post-content {
+		margin-top: $spacing-unit * 2;
+	}
+	.post-thumbnail {
+		max-width: 200px;
+		float: right;
+	}
+}

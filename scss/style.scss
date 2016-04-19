@@ -1,0 +1,71 @@
+@import 'vendor/bootstrap/normalize',
+		'vendor/animations/animations',
+		'variables',
+		'vendor/bootstrap/modals',
+		'vendor/owl.carousel',
+		'mixins',
+		'base',
+		'typography',
+		'utilities',
+		'layout/grid',
+		'layout/header',
+		'layout/sidebar',
+		'layout/footer',
+		'layout/single',
+		'layout/author',
+		'modules/tables',
+		'modules/cards',
+		'modules/buttons',
+		'modules/video',
+		'modules/modals',
+		'modules/forms',
+		'modules/accordian',
+		'modules/sliders',
+		'modules/pagination-links',
+		'modules/sticky',
+		'print';
+
+// .half,
+// .two-third,
+// .two-third-reversed,
+// .third,
+// .fourth {
+// 	margin-bottom: 1rem;
+// 	&-force, &-stack, &-only {
+// 		margin-bottom: 1rem;
+// 		div {
+// 			color: #fff;
+// 			// padding: 1rem;
+// 			&:first-child {
+// 				background-color: $gray;
+// 			}
+// 			&:nth-child(2) {
+// 				background-color: lighten($gray, 25%);
+// 			}
+// 			&:nth-child(3) {
+// 				background-color: lighten($gray, 45%);
+// 			}
+// 			&:last-child {
+// 				background-color: lighten($gray, 65%);
+// 				color: $gray;
+// 			}
+// 		}
+// 	}
+// 	div {
+// 		color: #fff;
+// 		// padding: 1rem;
+// 		&:first-child {
+// 			background-color: $gray;
+// 		}
+// 		&:nth-child(2) {
+// 			background-color: lighten($gray, 25%);
+// 		}
+// 		&:nth-child(3) {
+// 			background-color: lighten($gray, 45%);
+// 		}
+// 		&:last-child {
+// 			background-color: lighten($gray, 65%);
+// 			color: $gray;
+// 		}
+// 	}
+// }

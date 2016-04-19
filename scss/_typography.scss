@@ -1,0 +1,35 @@
+body {
+	font: 16px/1.5em $font-stack;
+	color: $gray;
+}
+
+h1 {
+	padding-bottom: $spacing-unit;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 300;
+	color: $brand;
+}
+
+p {
+	margin-bottom: $spacing-unit;
+}
+
+a {
+	color: $brand;
+	text-decoration: none;
+}
+
+hr {
+	border-top: 0;
+	border-bottom: 1px solid $mgray;
+}
+
+dl,
+dt,
+dd {
+	margin: 0;
+	padding: 0;
+}

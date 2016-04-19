@@ -1,0 +1,49 @@
+.author-sidebar {
+	padding-bottom: $spacing-unit * 2;
+	@include bp(md) {
+		padding-left: $spacing-unit * 2;
+		padding-bottom: 0;
+	}
+}
+
+.author-sidebar-container {
+	background-image: linear-gradient($white,$lgray);
+	border: 1px solid $mgray;
+	padding: $spacing-unit;
+	border-radius: $radius;
+	box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+.author-sidebar-container-meta {
+	@include clearfix;
+	.author-headshot {
+		display: inline-block;
+		float: left;
+		margin-right: $spacing-unit;
+		margin-bottom: $spacing-unit;
+		border-radius: 50%;
+		max-width: 85px;
+		transition: max-width 300ms ease-in-out;
+		@include bp(sm) {
+			max-width: 125px;
+		}
+	}
+	.post-sharing {
+		padding: 0;
+		a {
+			max-width: 50px;
+			margin-right: $spacing-unit / 2;
+		}
+		a:last-of-type:hover {
+			background-image: linear-gradient($brand,$brand);
+		}
+	}
+	.job-title {
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: $spacing-unit;
+	}
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+}

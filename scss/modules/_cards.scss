@@ -1,0 +1,158 @@
+.card, .number-card {
+	padding: 0 0 $spacing-unit * 2;
+	background-color: transparent;
+	@include bp(sm) {
+		& + & {
+			margin: 0 ($spacing-unit * 1.5) 0;
+		}
+		.half & {
+			@include bp(sm) {
+				width: calc(50% - 0.75rem);
+			}
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+			&:nth-child(2n+1) {
+				margin: 0;
+			}
+		}
+		.third & {
+			width: calc(50% - 0.75rem);
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+			&:nth-child(2n+1) {
+				margin: 0;
+			}
+		}
+		.fourth & {
+			width: calc(50% - 0.75rem);
+			margin: 0;
+			&:nth-child(2n) {
+				margin-left: 1.5rem;
+			}
+		}
+	}
+	@include bp(md) {
+		.third & {
+			width: calc(33.3333% - 1rem);
+			margin: 0;
+			&:nth-child(3n+2) {
+				margin: 0 1.5rem;
+			}
+			&:nth-child(3n+1) {
+				margin: 0;
+			}
+		}
+		.fourth & {
+			width: calc(25% - 1.15rem);
+			margin: 0;
+			&:nth-child(2n), &:nth-child(4n+3) {
+				margin-left: 1.5rem;
+			}
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.card:hover .card-top img,
+.number-card:hover .card-top img {
+	transform: scale(1.03);
+	opacity: 1;
+}
+
+.card-top {
+	overflow: hidden;
+	border: 1px solid $mgray;
+	border-radius: $radius $radius 0 0;
+	border-bottom: 0;
+	img {
+		box-shadow: 0 0 15px rgba(0,0,0,0.15), inset 0 0 25px rgba(0,0,0,0.75);
+		opacity: 0.8;
+		transition: all 300ms ease-in-out;
+	}
+}
+
+.card-bottom {
+	background-color: $white !important;
+	border: 1px solid $mgray;
+	border-radius: 0 0 3px 3px;
+	padding: 0 $spacing-unit;
+	position: relative;
+	box-shadow: 0 0 15px rgba(0,0,0,0.15);
+	min-height: $spacing-unit * 6;
+	p:last-child {
+		line-height: 1.2rem;
+	}
+	div {
+		width: calc(100% - 2rem);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.card-meta {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: .85rem;
+	line-height: 1rem;
+	opacity: .75;
+	margin-bottom: 0;
+	+ p {
+		margin-bottom: 0;
+	}
+	a {
+		color: inherit;
+	}
+}
+
+.card-flag {
+	position: absolute;
+	top: 0;
+	right: $spacing-unit;
+	transform: translateY(-50%);
+	img {
+		border-radius: 50%;
+		border: 5px solid $white;
+	}
+}
+
+.number-card {
+	background-color: $lgray;
+	border: 1px solid $mgray;
+	padding: ($spacing-unit * 2.5) ($spacing-unit * 2);
+	margin-bottom: $spacing-unit * 2 !important;
+	@include bp(md) {
+		&:nth-last-child(1) {
+			margin-bottom: 0 !important;
+		}
+	}
+	border-radius: $radius;
+	.number {
+		background-color: $brand;
+		display: inline;
+		border-radius: 50%;
+		font-size: 2rem;
+		line-height: 0.5rem;
+		box-shadow: 0 0 10px rgba(0,0,0,0.25);
+		text-shadow: 1px 1px 3px rgba(0,0,0,0.65);
+		padding: 1.4rem 1rem 1.4rem;
+		color: $white;
+		position: absolute;
+		top: -$spacing-unit;
+		left: -$spacing-unit;
+	}
+	h3 {
+		margin-top: -$spacing-unit / 2;
+		margin-bottom: $spacing-unit / 2;
+	}
+	.source {
+	    margin-top: $spacing-unit / 1.5;
+	    margin-bottom: -$spacing-unit;
+		font-size: .85rem;
+		font-style: italic;
+	}
+}

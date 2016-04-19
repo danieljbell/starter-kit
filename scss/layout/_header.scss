@@ -1,0 +1,14 @@
+#site-top {
+	background-image: linear-gradient($white,$lgray);
+	color: $gray;
+	border-bottom: 1px solid $mgray;
+	section {
+		display: none;
+	}
+}
+
+#menu-toggle {
+	text-transform: uppercase;
+	font-weight: bold;
+	float: right;
+}

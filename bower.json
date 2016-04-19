@@ -1,0 +1,23 @@
+{
+  "name": "starter-kit",
+  "description": "Project starter kit",
+  "main": "index.js",
+  "authors": [
+    "Daniel Bell"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/danieljbell/starter-kit",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.2.3",
+    "foundation-sites": "~6.2.1",
+    "waypoints": "~4.0.0"
+  }
+}

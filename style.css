@@ -767,18 +767,10 @@ body {
   color: #333;
 }
 
-h1 {
-  padding-bottom: 1rem;
-}
-
 h3 {
   font-size: 24px;
   font-weight: 300;
   color: #df6d2c;
-}
-
-p {
-  margin-bottom: 1rem;
 }
 
 a {
@@ -833,12 +825,14 @@ dd {
   text-align: left;
 }
 
-.text-center {
+.text-center, .text-right {
   text-align: center;
 }
 
-.text-right {
-  text-align: right;
+@media (min-width: 480px) {
+  .text-right {
+    text-align: right;
+  }
 }
 
 .hide-md {
@@ -853,6 +847,34 @@ dd {
 
 .brand-font {
   color: #df6d2c !important;
+}
+
+.pad-x {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.pad-y {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.pad-b {
+  padding-bottom: 3rem;
+}
+
+.mar-x {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.mar-y {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.mar-b {
+  margin-bottom: 3rem;
 }
 
 /*=====================================================
@@ -887,6 +909,7 @@ GRID TOC
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
+  position: relative;
 }
 
 .half:before, .half:after {
@@ -2165,6 +2188,51 @@ button.btn-white-outline:hover a {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.page-template-page-video-view .video-inner iframe {
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.video-thumb .card-top img {
+  position: relative;
+}
+
+.video-thumb .card-top a:after {
+  content: '\25BA';
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-100%);
+          transform: translateX(-50%) translateY(-100%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 3rem;
+  padding: 0 2rem;
+  height: 5rem;
+  line-height: 5rem;
+  border-radius: 3px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .video-thumb .card-top a:after {
+    top: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .video-thumb .card-top a:after {
+    top: 47%;
+  }
+}
+
+.video-thumb .card-top:hover a:after {
+  background-color: rgba(223, 109, 44, 0.75);
 }
 
 .modal-content {

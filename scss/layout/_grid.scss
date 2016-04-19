@@ -45,6 +45,7 @@ GRID TOC
 */ 
 .half {
 	@include make-row;
+	position: relative;
 	> * {
 		@include make-sm-column(6);
 	}

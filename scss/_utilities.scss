@@ -35,7 +35,10 @@
 }
 
 .text-right {
-	text-align: right;
+	@extend .text-center;
+	@include bp(sm) {
+		text-align: right;
+	}
 }
 
 .hide-md {
@@ -47,4 +50,32 @@
 
 .brand-font {
 	color: $brand !important;
+}
+
+.pad-x {
+	padding-left: $spacing-unit * 3;
+	padding-right: $spacing-unit * 3;
+}
+
+.pad-y {
+	padding-top: $spacing-unit * 3;
+	padding-bottom: $spacing-unit * 3;
+}
+
+.pad-b {
+	padding-bottom: $spacing-unit * 3;
+}
+
+.mar-x {
+	margin-left: $spacing-unit * 3;
+	margin-right: $spacing-unit * 3;
+}
+
+.mar-y {
+	margin-top: $spacing-unit * 3;
+	margin-bottom: $spacing-unit * 3;
+}
+
+.mar-b {
+	margin-bottom: $spacing-unit * 3;
 }

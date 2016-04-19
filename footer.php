@@ -1,6 +1,6 @@
 </div>
 
-<section id="site-footer" style="height: 1000px;">
+<section id="site-footer">
 	<div class="site-width">
 		<div class="half">
 			<div><a href="<?php echo site_url(); ?>">logo</a></div>

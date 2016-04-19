@@ -115,7 +115,7 @@ $('.owl-carousel-basic-nav').owlCarousel({
 $('.owl-carousel-nav-bar').owlCarousel({
     loop:true,
     responsiveClass:true,
-    // autoplay: true,
+    autoplay: 5000,
     items:1,
     nav:true,
     navText: '<>',
